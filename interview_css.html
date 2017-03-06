@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>初级前端面试CSS试题</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        min-width: 800px;
+    }
+    /*文档内容的样式*/
+    
+    .container {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        background-color: #f7f7f4;
+    }
+    /*文档标题的样式*/
+    
+    header {
+        font-size: 24px;
+        color: #3f3f69;
+        font-family: inherit;
+        height: 80px;
+        height: 66px;
+        background-color: #f7f7f4;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+        display: -webkit-box;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+    /*问题的样式*/
+    
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    /*答案的样式*/
+    
+    .text {
+        text-indent: 2em;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        初级前端工程师面试题--CSS部分
+    </header>
+    <article>
+        <div class="container">
+            <!-- 问题1 -->
+            <div class="title">1、介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？</div>
+            <p class="text">（1）有两种， IE 盒子模型、W3C 盒子模型；</p>
+            <p class="text">（2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border)；</p>
+            <p class="text">（3）区 别： IE的content部分把 border 和 padding计算了进去;</p>
+            <!-- 问题2 -->
+            <div class="title">2、请解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？</div>
+            <p class="text">css3弹性盒模型flexbox,是 CSS3 规范中提出的一种新的布局方式。该布局模型的目的是提供一种更加高效的方式来对容器中的条目进行布局、对齐和分配空间。这种布局方式在条目尺寸未知或动态时也能工作。已经被主流浏览器所支持，可以在 Web 应用开发中使用。 Web 应用一般都要求适配不同的设备尺寸和浏览器分辨率。</p>
+            <p class="text">响应式用户界面设计中最重要的一环就是布局。需要根据窗口尺寸来调整布局，从而改变组件的尺寸和位置，以达到最佳的显示效果。这也使得布局的逻辑变得更加复杂。弹性盒模型可以用简单的方式满足很多常见的复杂的布局需求。它的优势在于开发人员只是声明布局应该具有的行为，而不需要给出具体的实现方式。浏览器会负责完成实际的布局。适用于移动端和响应式布局。</p>
+            <!-- 问题3 -->
+            <div class="title">3、标准盒模型与怪异盒模型：</div>
+            <p class="text">•在标准盒模型中，设置padding会自动挤压空间，而不会利用给出来的空间，不会占用宽内位置，不通过width影响，会自己挤出空间来，就好像，我的鞋子是80*80的，我不需要100*100的盒子，你给我一个80*80的盒子就好了，我靠我自己来把他挤成100*100，这时很显然的解决的办法就出来了，我们的盒子的宽度只要设置成80*80然后设置padding：10px；来让鞋子把周围额空间挤成100*100。</p>
+            <p class="text">•怪异盒模型与标准盒模型的区别就是，怪异盒模型是先做好盒子，再来做鞋子，我把盒子的大小固定住，你鞋子怎么挤也没有用。这时我们只要在我们的代码中加一条box-sizing：boeder-box，就可以把我的盒子给固定住，这时你鞋子想要用padding来撑大盒子的空间已经没用了，因为鞋子已经被固定死了， 这就是padding的标准盒模型，先做好鞋子，再去做盒子
+            </p>
+            <!-- 问题4 -->
+            <div class="title">4、CSS选择符有哪些？哪些属性可以继承？</div>
+            <p class="text">id选择器；类选择器；标签选择器；相邻选择器；子选择器（ul > li）；后代选择器（li a）通配符选择器(*)；属性选择器(a[rel = "external"])；伪类选择器（a:hover, li:nth-child）</p>
+            <p class="text">可继承的样式： font-size font-family color, UL LI DL DD DT;</p>
+            <p class="text"> 不可继承的样式：border padding margin width height ;</p>
+            <!-- 问题5 -->
+            <div class="title">5、CSS3新增伪类有那些？</div>
+            <p class="text"> p:first-of-type 选择属于其父元素的首个 p元素的每个 p元素。</p>
+            <p class="text">p:last-of-type 选择属于其父元素的最后 p元素的每个 p 元素。</p>
+            <p class="text">p:only-of-type 选择属于其父元素唯一的 p 元素的每个 p 元素。</p>
+            <p class="text">p:only-child 选择属于其父元素的唯一子元素的每个 p 元素。</p>
+            <p class="text">p:nth-child(2) 选择属于其父元素的第二个子元素的每个 p元素。</p>
+            <p class="text">:after 在元素之前添加内容,也可以用来做清除浮动。</p>
+            <p class="text">:before 在元素之后添加内容</p>
+            <p class="text">:enabled</p>
+            <p class="text">:disabled 控制表单控件的禁用状态。</p>
+            <p class="text">:checked 单选框或复选框被选中。</p>
+            <!-- 问题6 -->
+            <div class="title">6、如何居中div？</div>
+            <p class="text">•水平居中：给div设置一个宽度，然后添加margin:0 auto属性</p>
+            <p class="text">div{width:200px;margin:0 auto;}</p>
+            <p class="text">•让绝对定位的div居中</p>
+            <p class="text">div {width: 300px; height: 300px；margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0;background-color: pink; /* 方便看效果 */}</p>
+            <p class="text">•水平垂直居中一（确定容器的宽高，设置层的外边距）</p>
+            <p class="text">div {position: relative; width:500px; height:300px;top: 50%; left: 50%; margin: -150px 0 0 -250px; /* 外边距为自身宽高的一半 */background-color: pink; /* 方便看效果 */}</p>
+            <p class="text">•水平垂直居中二（未知容器的宽高，利用 `transform` 属性）</p>
+            <p class="text">div {position: absolute; width:500px; height:300px; top: 50%; left: 50%;</p>
+            <p class="text">transform: translate(-50%, -50%); background-color: pink; /* 方便看效果 */}</p>
+            <!--问题7  -->
+            <div class="title">7、position的值relative和absolute定位原点是？</div>
+            <p class="text">absolute：生成绝对定位的元素，相对于值不为 static的第一个父元素进行定位。</p>
+            <p class="text">fixed （老IE不支持）： 生成绝对定位的元素，相对于浏览器窗口进行定位。</p>
+            <p class="text">relative：生成相对定位的元素，相对于其正常位置进行定位。</p>
+            <p class="text">static：默认值。没有定位，元素出现在正常的流中</p>
+            <p class="text">inherit：规定从父元素继承 position 属性的值。</p>
+            <!-- 问题8 -->
+            <div class="title">8、CSS3有哪些新特性？</div>
+            <p class="text">新增各种CSS选择器 （: not(.input)：所有 class 不是“input”的节点）</p>
+            <p class="text">圆角 （border-radius:8px） 多列布局 （multi-column layout） 阴影和反射 （Shadow\Reflect） 文字特效 （text-shadow、） 文字渲染 （Text-decoration） 线性渐变 （gradient） 旋转 （transform） 增加了缩放,定位,倾斜,动画，多背景 \scale(0.85,0.90)\ translate(0px,-30px)\ skew(-9deg,0deg)\Animation:</p>
+            <!-- 问题9 -->
+            <div class="title">9、css多列等高如何实现？</div>
+            <p class="text">利用padding-bottom|margin-bottom正负值相抵； 设置父容器设置超出隐藏（overflow:hidden），这样子父容器的高度就还是它里面的列没有设定padding-bottom时的高度，当它里面的任 一列高度增加了，则父容器的高度被撑到里面最高那列的高度，其他比这列矮的列会用它们的padding-bottom补偿这部分高度差</p>
+            <!-- 问题10 -->
+            <div class="title">10、margin和padding分别适合什么场景使用？</div>
+            <p class="text">margin： 需要在border外侧添加空白时； 空白处不需要背景（色）时； 上下相连的两个盒子之间的空白，需要相互抵消时； 如15px+20px的margin，将得到20px的空白。
+            </p>
+            <p class="text">padding： 需要在border内测添加空白时； 空白处需要背景（色）时； 上下相连的两个盒子之间的空白，希望等于两者之和时。 如15px+20px的padding，将得到35px的空白。
+            </p>
+        </div>
+    </article>
+</body>
+
+</html>
